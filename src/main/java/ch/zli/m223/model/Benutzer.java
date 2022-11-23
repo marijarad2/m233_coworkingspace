@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
@@ -20,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 */
 
 @Entity
+@Table(name = "benutzer")
 public class Benutzer {
 
   @Id
