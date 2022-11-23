@@ -42,6 +42,28 @@ public class BuchungRessourceTest {
                     .statusCode(401);
         }
 
+
+        //Update Buchung Admin 
+        @Test 
+        public void TestUpdateBuchungAdmin() {
+              given()
+                  .auth().oauth2(admimJwt)
+                  .when().get("/buchung/2")
+                  .then()
+                      .statusCode(401);
+          }
+
+
+         // Update Buchung Mitglied
+          @Test 
+          public void TestUpdateBuchung() {
+                given()
+                    .auth().oauth2(mitgliedJwt)
+                    .when().get("/buchung/3")
+                    .then()
+                        .statusCode(401);
+            }
+
     
 
 
